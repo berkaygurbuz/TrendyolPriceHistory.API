@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PriceHistory.Business.Abstract;
+using PriceHistory.Business.Concrete;
+using PriceHistory.DataAcces.Abstract;
+using PriceHistory.DataAcces.Concrete;
 
 namespace PriceHistory.API
 {
@@ -17,6 +21,8 @@ namespace PriceHistory.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSingleton<IPriceHistoryService, PriceHistoryManager>();
+            services.AddSingleton<IPriceHistoryRepository, PriceHistoryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -27,14 +33,16 @@ namespace PriceHistory.API
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                endpoints.MapControllers();
             });
         }
     }

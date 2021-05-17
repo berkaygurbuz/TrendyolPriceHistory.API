@@ -1,0 +1,13 @@
+C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.DataAcces\bin\Debug\netcoreapp3.1\PriceHistory.DataAcces.deps.json
+C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.DataAcces\bin\Debug\netcoreapp3.1\PriceHistory.DataAcces.dll
+C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.DataAcces\obj\Debug\netcoreapp3.1\PriceHistory.DataAcces.csprojAssemblyReference.cache
+C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.DataAcces\obj\Debug\netcoreapp3.1\PriceHistory.DataAcces.AssemblyInfoInputs.cache
+C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.DataAcces\obj\Debug\netcoreapp3.1\PriceHistory.DataAcces.AssemblyInfo.cs
+C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.DataAcces\bin\Debug\netcoreapp3.1\PriceHistory.Entities.dll
+C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.DataAcces\bin\Debug\netcoreapp3.1\PriceHistory.DataAcces.runtimeconfig.json
+C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.DataAcces\bin\Debug\netcoreapp3.1\PriceHistory.DataAcces.runtimeconfig.dev.json
+C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.DataAcces\bin\Debug\netcoreapp3.1\PriceHistory.DataAcces.pdb
+C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.DataAcces\bin\Debug\netcoreapp3.1\PriceHistory.Entities.pdb
+C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.DataAcces\obj\Debug\netcoreapp3.1\PriceHistory.DataAcces.csproj.CopyComplete
+C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.DataAcces\obj\Debug\netcoreapp3.1\PriceHistory.DataAcces.dll
+C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.DataAcces\obj\Debug\netcoreapp3.1\PriceHistory.DataAcces.pdb
