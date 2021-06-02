@@ -5,6 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20210517101705_init.cs" />
+    <Compile Remove="Migrations\20210517101705_init.Designer.cs" />
+    <Compile Remove="Migrations\20210531201150_MyFirstMigration.cs" />
+    <Compile Remove="Migrations\20210531201150_MyFirstMigration.Designer.cs" />
+    <Compile Remove="Migrations\20210602172905_newTableCreated.cs" />
+    <Compile Remove="Migrations\20210602172905_newTableCreated.Designer.cs" />
+    <Compile Remove="Migrations\20210602173054_newTableCreated.cs" />
+    <Compile Remove="Migrations\20210602173054_newTableCreated.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">

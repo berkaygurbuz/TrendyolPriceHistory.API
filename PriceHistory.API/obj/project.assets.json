@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "HtmlAgilityPack/1.11.33": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/HtmlAgilityPack.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/HtmlAgilityPack.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -2589,6 +2598,54 @@
     }
   },
   "libraries": {
+    "HtmlAgilityPack/1.11.33": {
+      "sha512": "ccsOdeRuObzQNy3FGLHd0MTmPvEu9nKUYDAqLham1XD3azbU+gcyRF6Hu87A68b7WqGpCdBZiLU7CwJVVmTb6A==",
+      "type": "package",
+      "path": "htmlagilitypack/1.11.33",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "htmlagilitypack.1.11.33.nupkg.sha512",
+        "htmlagilitypack.nuspec",
+        "lib/Net35/HtmlAgilityPack.dll",
+        "lib/Net35/HtmlAgilityPack.pdb",
+        "lib/Net35/HtmlAgilityPack.xml",
+        "lib/Net40-client/HtmlAgilityPack.dll",
+        "lib/Net40-client/HtmlAgilityPack.pdb",
+        "lib/Net40-client/HtmlAgilityPack.xml",
+        "lib/Net40/HtmlAgilityPack.XML",
+        "lib/Net40/HtmlAgilityPack.dll",
+        "lib/Net40/HtmlAgilityPack.pdb",
+        "lib/Net45/HtmlAgilityPack.XML",
+        "lib/Net45/HtmlAgilityPack.dll",
+        "lib/Net45/HtmlAgilityPack.pdb",
+        "lib/NetCore45/HtmlAgilityPack.XML",
+        "lib/NetCore45/HtmlAgilityPack.dll",
+        "lib/NetCore45/HtmlAgilityPack.pdb",
+        "lib/netstandard1.3/HtmlAgilityPack.deps.json",
+        "lib/netstandard1.3/HtmlAgilityPack.dll",
+        "lib/netstandard1.3/HtmlAgilityPack.pdb",
+        "lib/netstandard1.3/HtmlAgilityPack.xml",
+        "lib/netstandard1.6/HtmlAgilityPack.deps.json",
+        "lib/netstandard1.6/HtmlAgilityPack.dll",
+        "lib/netstandard1.6/HtmlAgilityPack.pdb",
+        "lib/netstandard1.6/HtmlAgilityPack.xml",
+        "lib/netstandard2.0/HtmlAgilityPack.deps.json",
+        "lib/netstandard2.0/HtmlAgilityPack.dll",
+        "lib/netstandard2.0/HtmlAgilityPack.pdb",
+        "lib/netstandard2.0/HtmlAgilityPack.xml",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.XML",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.dll",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.pdb",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.XML",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.pdb",
+        "lib/uap10.0/HtmlAgilityPack.XML",
+        "lib/uap10.0/HtmlAgilityPack.dll",
+        "lib/uap10.0/HtmlAgilityPack.pdb",
+        "lib/uap10.0/HtmlAgilityPack.pri"
+      ]
+    },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "sha512": "Y4rs5aMEXY8G7wJo5S3EEt6ltqyOTr/qOeZzfn+hw/fuQj5GppGckMY5psGLETo1U9hcT5MmAhaT5xtusM1b5g==",
       "type": "package",
@@ -8452,6 +8509,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "HtmlAgilityPack >= 1.11.33",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5",
       "PriceHistory.Business >= 1.0.0"
     ]
@@ -8462,11 +8520,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.API\\PriceHistory.API.csproj",
+      "projectUniqueName": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.API\\PriceHistory.API.csproj",
       "projectName": "PriceHistory.API",
-      "projectPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.API\\PriceHistory.API.csproj",
+      "projectPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.API\\PriceHistory.API.csproj",
       "packagesPath": "C:\\Users\\Berkay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.API\\obj\\",
+      "outputPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Berkay\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8482,8 +8540,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Business\\PriceHistory.Business.csproj": {
-              "projectPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Business\\PriceHistory.Business.csproj"
+            "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Business\\PriceHistory.Business.csproj": {
+              "projectPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Business\\PriceHistory.Business.csproj"
             }
           }
         }
@@ -8497,6 +8555,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "HtmlAgilityPack": {
+            "target": "Package",
+            "version": "[1.11.33, )"
+          },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[3.1.5, )"

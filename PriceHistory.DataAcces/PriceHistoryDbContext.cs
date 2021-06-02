@@ -13,5 +13,6 @@ namespace PriceHistory.DataAcces
             optionsBuilder.UseSqlServer("Server=DESKTOP-0Q2H04V; Database=DbPriceHistory;Integrated Security=True;");
         }
         public DbSet<Product> Products { get; set; }
+        public DbSet<PriceHistories> PriceHistorys { get; set; }
     }
 }

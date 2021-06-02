@@ -11,3 +11,16 @@ C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.Business\bin\Debug\netcor
 C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.Business\bin\Debug\netcoreapp3.1\PriceHistory.DataAcces.pdb
 C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.Business\bin\Debug\netcoreapp3.1\PriceHistory.Entities.pdb
 C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.Business\obj\Debug\netcoreapp3.1\PriceHistory.Business.csproj.CopyComplete
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Business\bin\Debug\netcoreapp3.1\PriceHistory.Business.deps.json
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Business\bin\Debug\netcoreapp3.1\PriceHistory.Business.dll
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Business\bin\Debug\netcoreapp3.1\PriceHistory.Business.pdb
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Business\bin\Debug\netcoreapp3.1\PriceHistory.DataAcces.dll
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Business\bin\Debug\netcoreapp3.1\PriceHistory.Entities.dll
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Business\bin\Debug\netcoreapp3.1\PriceHistory.DataAcces.pdb
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Business\bin\Debug\netcoreapp3.1\PriceHistory.Entities.pdb
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Business\obj\Debug\netcoreapp3.1\PriceHistory.Business.csprojAssemblyReference.cache
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Business\obj\Debug\netcoreapp3.1\PriceHistory.Business.AssemblyInfoInputs.cache
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Business\obj\Debug\netcoreapp3.1\PriceHistory.Business.AssemblyInfo.cs
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Business\obj\Debug\netcoreapp3.1\PriceHistory.Business.csproj.CopyComplete
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Business\obj\Debug\netcoreapp3.1\PriceHistory.Business.dll
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Business\obj\Debug\netcoreapp3.1\PriceHistory.Business.pdb

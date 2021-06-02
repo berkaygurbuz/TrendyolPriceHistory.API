@@ -8,37 +8,19 @@ using System.Threading.Tasks;
 
 namespace PriceHistory.Business.Concrete
 {
-    public class PriceHistoryManager : IPriceHistoryService
+    public class IPriceHistoryManager : IPriceHistoryService
     {
 
         private IPriceHistoryRepository _priceHistoryRepository;
-        public PriceHistoryManager(IPriceHistoryRepository priceHistoryRepository)
+        public IPriceHistoryManager(IPriceHistoryRepository priceHistoryRepository)
         {
             _priceHistoryRepository = priceHistoryRepository;
         }
-        public async Task<Product> createProduct(Product product)
-        {
-            return await _priceHistoryRepository.createProduct(product);
-        }
 
-        public async Task deleteProduct(int id)
+        public async Task<PriceHistories> savePriceHistory(PriceHistories priceHistories)
         {
-            await _priceHistoryRepository.deleteProduct(id);
-        }
+            return await _priceHistoryRepository.savePriceHistory(priceHistories);
 
-        public async Task<Product> getProduct(int id)
-        {
-            return await _priceHistoryRepository.getProduct(id);
-        }
-
-        public async Task<List<Product>> getProducts()
-        {
-            return await _priceHistoryRepository.getProducts();
-        }
-
-        public async Task<Product> updateProduct(Product product)
-        {
-            return await _priceHistoryRepository.updateProduct(product);
         }
     }
 }

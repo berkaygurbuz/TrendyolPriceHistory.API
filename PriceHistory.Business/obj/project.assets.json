@@ -5691,11 +5691,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Business\\PriceHistory.Business.csproj",
+      "projectUniqueName": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Business\\PriceHistory.Business.csproj",
       "projectName": "PriceHistory.Business",
-      "projectPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Business\\PriceHistory.Business.csproj",
+      "projectPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Business\\PriceHistory.Business.csproj",
       "packagesPath": "C:\\Users\\Berkay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Business\\obj\\",
+      "outputPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Berkay\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5711,11 +5711,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.DataAcces\\PriceHistory.DataAcces.csproj": {
-              "projectPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.DataAcces\\PriceHistory.DataAcces.csproj"
+            "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.DataAcces\\PriceHistory.DataAcces.csproj": {
+              "projectPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.DataAcces\\PriceHistory.DataAcces.csproj"
             },
-            "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Entities\\PriceHistory.Entities.csproj": {
-              "projectPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Entities\\PriceHistory.Entities.csproj"
+            "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Entities\\PriceHistory.Entities.csproj": {
+              "projectPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Entities\\PriceHistory.Entities.csproj"
             }
           }
         }

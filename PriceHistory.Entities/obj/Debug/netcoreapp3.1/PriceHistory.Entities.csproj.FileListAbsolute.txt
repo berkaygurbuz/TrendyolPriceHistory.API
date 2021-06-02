@@ -6,3 +6,11 @@ C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.Entities\obj\Debug\netcor
 C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.Entities\obj\Debug\netcoreapp3.1\PriceHistory.Entities.AssemblyInfo.cs
 C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.Entities\obj\Debug\netcoreapp3.1\PriceHistory.Entities.dll
 C:\Users\Berkay\source\repos\PriceHistory\PriceHistory.Entities\obj\Debug\netcoreapp3.1\PriceHistory.Entities.pdb
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Entities\bin\Debug\netcoreapp3.1\PriceHistory.Entities.deps.json
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Entities\bin\Debug\netcoreapp3.1\PriceHistory.Entities.dll
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Entities\bin\Debug\netcoreapp3.1\PriceHistory.Entities.pdb
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Entities\obj\Debug\netcoreapp3.1\PriceHistory.Entities.csprojAssemblyReference.cache
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Entities\obj\Debug\netcoreapp3.1\PriceHistory.Entities.AssemblyInfoInputs.cache
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Entities\obj\Debug\netcoreapp3.1\PriceHistory.Entities.AssemblyInfo.cs
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Entities\obj\Debug\netcoreapp3.1\PriceHistory.Entities.dll
+C:\Users\Berkay\Desktop\TrendyolPriceHistory.API\PriceHistory.Entities\obj\Debug\netcoreapp3.1\PriceHistory.Entities.pdb

@@ -8,10 +8,7 @@ namespace PriceHistory.DataAcces.Abstract
 {
     public interface IPriceHistoryRepository
     {
-        Task<List<Product>> getProducts();
-        Task<Product> getProduct(int id);
-        Task<Product> createProduct(Product product);
-        Task<Product> updateProduct(Product product);
-        Task deleteProduct(int id);
+        Task<PriceHistories> savePriceHistory(PriceHistories priceHistories);
+
     }
 }

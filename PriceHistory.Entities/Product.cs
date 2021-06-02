@@ -10,6 +10,8 @@ namespace PriceHistory.Entities
         public int Id { get; set; }
 
         public string name { get; set; }
-        public float price { get; set; }
+        public double price { get; set; }
+
+        public bool isApprove { get; set; }
     }
 }

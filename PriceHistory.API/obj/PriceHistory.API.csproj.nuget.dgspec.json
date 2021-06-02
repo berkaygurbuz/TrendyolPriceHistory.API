@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.API\\PriceHistory.API.csproj": {}
+    "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.API\\PriceHistory.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.API\\PriceHistory.API.csproj": {
+    "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.API\\PriceHistory.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.API\\PriceHistory.API.csproj",
+        "projectUniqueName": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.API\\PriceHistory.API.csproj",
         "projectName": "PriceHistory.API",
-        "projectPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.API\\PriceHistory.API.csproj",
+        "projectPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.API\\PriceHistory.API.csproj",
         "packagesPath": "C:\\Users\\Berkay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.API\\obj\\",
+        "outputPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Berkay\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Business\\PriceHistory.Business.csproj": {
-                "projectPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Business\\PriceHistory.Business.csproj"
+              "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Business\\PriceHistory.Business.csproj": {
+                "projectPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Business\\PriceHistory.Business.csproj"
               }
             }
           }
@@ -42,6 +42,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.33, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.5, )"
@@ -69,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Business\\PriceHistory.Business.csproj": {
+    "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Business\\PriceHistory.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Business\\PriceHistory.Business.csproj",
+        "projectUniqueName": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Business\\PriceHistory.Business.csproj",
         "projectName": "PriceHistory.Business",
-        "projectPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Business\\PriceHistory.Business.csproj",
+        "projectPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Business\\PriceHistory.Business.csproj",
         "packagesPath": "C:\\Users\\Berkay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Business\\obj\\",
+        "outputPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Berkay\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -92,11 +96,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.DataAcces\\PriceHistory.DataAcces.csproj": {
-                "projectPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.DataAcces\\PriceHistory.DataAcces.csproj"
+              "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.DataAcces\\PriceHistory.DataAcces.csproj": {
+                "projectPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.DataAcces\\PriceHistory.DataAcces.csproj"
               },
-              "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Entities\\PriceHistory.Entities.csproj": {
-                "projectPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Entities\\PriceHistory.Entities.csproj"
+              "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Entities\\PriceHistory.Entities.csproj": {
+                "projectPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Entities\\PriceHistory.Entities.csproj"
               }
             }
           }
@@ -128,14 +132,14 @@
         }
       }
     },
-    "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.DataAcces\\PriceHistory.DataAcces.csproj": {
+    "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.DataAcces\\PriceHistory.DataAcces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.DataAcces\\PriceHistory.DataAcces.csproj",
+        "projectUniqueName": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.DataAcces\\PriceHistory.DataAcces.csproj",
         "projectName": "PriceHistory.DataAcces",
-        "projectPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.DataAcces\\PriceHistory.DataAcces.csproj",
+        "projectPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.DataAcces\\PriceHistory.DataAcces.csproj",
         "packagesPath": "C:\\Users\\Berkay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.DataAcces\\obj\\",
+        "outputPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.DataAcces\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Berkay\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -151,8 +155,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Entities\\PriceHistory.Entities.csproj": {
-                "projectPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Entities\\PriceHistory.Entities.csproj"
+              "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Entities\\PriceHistory.Entities.csproj": {
+                "projectPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Entities\\PriceHistory.Entities.csproj"
               }
             }
           }
@@ -200,14 +204,14 @@
         }
       }
     },
-    "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Entities\\PriceHistory.Entities.csproj": {
+    "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Entities\\PriceHistory.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Entities\\PriceHistory.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Entities\\PriceHistory.Entities.csproj",
         "projectName": "PriceHistory.Entities",
-        "projectPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Entities\\PriceHistory.Entities.csproj",
+        "projectPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Entities\\PriceHistory.Entities.csproj",
         "packagesPath": "C:\\Users\\Berkay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Berkay\\source\\repos\\PriceHistory\\PriceHistory.Entities\\obj\\",
+        "outputPath": "C:\\Users\\Berkay\\Desktop\\TrendyolPriceHistory.API\\PriceHistory.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Berkay\\AppData\\Roaming\\NuGet\\NuGet.Config",
