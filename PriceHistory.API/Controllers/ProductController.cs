@@ -87,6 +87,7 @@ namespace PriceHistory.API.Controllers
             }
         }
         [HttpPost]
+        [Route("createProduct")]
         public async Task<IActionResult> createProduct(Product product)
         {
             var newProduct = await _productService.createProduct(product);

@@ -10,7 +10,7 @@ using PriceHistory.Entities;
 
 namespace PriceHistory.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api")]
     [ApiController]
     public class PriceHistoryController : ControllerBase
     {
