@@ -10,8 +10,8 @@ using PriceHistory.DataAcces;
 namespace PriceHistory.DataAcces.Migrations
 {
     [DbContext(typeof(PriceHistoryDbContext))]
-    [Migration("20210602173210_newTableCreated")]
-    partial class newTableCreated
+    [Migration("20210613125905_firstMig")]
+    partial class firstMig
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
