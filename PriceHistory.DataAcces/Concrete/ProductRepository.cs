@@ -10,6 +10,17 @@ namespace PriceHistory.DataAcces.Concrete
 {
     public class ProductRepository : IProductRepository
     {
+        public async Task acceptRequest(int id)
+        {
+            using (var priceHistoryDbContext = new PriceHistoryDbContext())
+            {
+                var product=await getProduct(id);
+                product.isApprove = true;
+                priceHistoryDbContext.Update(product);
+                await priceHistoryDbContext.SaveChangesAsync();
+            }
+        }
+
         public async Task<Product> createProduct(Product product)
         {
             using (var priceHistoryDbContext = new PriceHistoryDbContext())
@@ -55,5 +66,7 @@ namespace PriceHistory.DataAcces.Concrete
                 return product;
             }
         }
+
+       
     }
 }

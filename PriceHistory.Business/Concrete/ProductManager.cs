@@ -16,6 +16,12 @@ namespace PriceHistory.Business.Concrete
         {
             _productRepository = productRepository;
         }
+
+        public async Task acceptRequest(int id)
+        {
+            await _productRepository.acceptRequest(id);
+        }
+
         public async Task<Product> createProduct(Product product)
         {
             return await _productRepository.createProduct(product);

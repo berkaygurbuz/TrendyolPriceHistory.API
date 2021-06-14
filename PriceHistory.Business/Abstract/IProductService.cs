@@ -13,5 +13,7 @@ namespace PriceHistory.Business.Abstract
         Task<Product> createProduct(Product product);
         Task<Product> updateProduct(Product product);
         Task deleteProduct(int id);
+        Task acceptRequest(int id);
+
     }
 }

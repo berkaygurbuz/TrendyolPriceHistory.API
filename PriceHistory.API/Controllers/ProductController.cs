@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
@@ -28,23 +29,11 @@ namespace PriceHistory.API.Controllers
         {
 
             var products = await _productService.getProducts();
-            foreach (var item in products)
-            {
-                var document = new HtmlWeb().Load(item.name);
-                var price = document.DocumentNode.SelectSingleNode("//span[contains(@class,'prc-dsc')]");
-                Product yeni = new Product();
-                string yeniPrice = price.InnerText;
-                int pos = yeniPrice.IndexOf(" ");
-                yeniPrice = yeniPrice.Substring(0, pos);
-                yeni.name = "yeni";
-                yeni.price = float.Parse(yeniPrice);
-                var newProduct = await _productService.createProduct(yeni);
-
-            }
             return Ok(products);//200+data
         }
 
         [HttpGet]
+        [Route("getProduct")]
         public async Task<IActionResult> getProduct(int id)
         {
             var product = await _productService.getProduct(id);
@@ -77,7 +66,9 @@ namespace PriceHistory.API.Controllers
             var newProduct = await _productService.createProduct(product);
             return Ok(newProduct);
         }
-        public async Task<IActionResult> updateProduct(Product product)
+        [HttpPut]
+        [Route("updateProduct")]
+        public async Task<IActionResult> updateProduct([FromBody]Product product)
         {
             if (_productService.getProduct(product.Id) != null)
             {
@@ -87,18 +78,11 @@ namespace PriceHistory.API.Controllers
             return NotFound();
         }
 
-        [HttpPost]
-        [Route("acceptRequest")]
-        public async Task<IActionResult> acceptRequest(string id)
+        [HttpPut]
+        [Route("acceptRequest/{id}")]
+        public async Task<IActionResult> acceptRequest(int id)
         {
-            using (var priceHistoryDbContext = new PriceHistoryDbContext())
-            {
-                
-                Product product = new Product();
-                product.Id = Convert.ToInt32(id);
-                product.isApprove = true;
-                await priceHistoryDbContext.SaveChangesAsync();
-            }
+            await _productService.acceptRequest(id);
             return Ok();
         }
     }
