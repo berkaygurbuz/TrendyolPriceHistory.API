@@ -22,6 +22,17 @@ namespace PriceHistory.API.Controllers
         {
             _productService = priceHistoryService;
         }
+        [HttpGet]
+        [Route("getByPage/{page}")]
+        public async Task<IActionResult> getByPage(int page)
+        {
+            using (var priceHistoryDbContext = new PriceHistoryDbContext())
+            {
+                var product= priceHistoryDbContext.Products.ToList().Skip(page*10).Take(10).ToList();
+                return Ok(product);
+            }
+
+        }
 
         [HttpGet]
         [Route("getAllProducts")]
