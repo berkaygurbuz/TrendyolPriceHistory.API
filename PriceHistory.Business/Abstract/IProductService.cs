@@ -15,5 +15,7 @@ namespace PriceHistory.Business.Abstract
         Task deleteProduct(int id);
         Task acceptRequest(int id);
 
+        Task<List<Product>> getProductBySearch(string search);
+
     }
 }

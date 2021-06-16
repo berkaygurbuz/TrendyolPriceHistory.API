@@ -22,3 +22,4 @@ C:\Users\Berkay\Desktop\repos\TrendyolPriceHistory.API\PriceHistory.Entities\obj
 C:\Users\Berkay\Desktop\repos\TrendyolPriceHistory.API\PriceHistory.Entities\obj\Debug\netcoreapp3.1\PriceHistory.Entities.csproj.CoreCompileInputs.cache
 C:\Users\Berkay\Desktop\repos\TrendyolPriceHistory.API\PriceHistory.Entities\obj\Debug\netcoreapp3.1\PriceHistory.Entities.dll
 C:\Users\Berkay\Desktop\repos\TrendyolPriceHistory.API\PriceHistory.Entities\obj\Debug\netcoreapp3.1\PriceHistory.Entities.pdb
+C:\Users\Berkay\Desktop\repos\TrendyolPriceHistory.API\PriceHistory.Entities\obj\Debug\netcoreapp3.1\PriceHistory.Entities.csprojAssemblyReference.cache

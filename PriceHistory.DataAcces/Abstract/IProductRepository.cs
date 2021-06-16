@@ -10,6 +10,8 @@ namespace PriceHistory.DataAcces.Abstract
     {
         Task<List<Product>> getProducts();
         Task<Product> getProduct(int id);
+        Task<List<Product>> getProductBySearch(string search);
+
         Task<Product> createProduct(Product product);
         Task<Product> updateProduct(Product product);
         Task deleteProduct(int id);

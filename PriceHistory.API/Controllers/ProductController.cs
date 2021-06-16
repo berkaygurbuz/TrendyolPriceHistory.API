@@ -22,6 +22,15 @@ namespace PriceHistory.API.Controllers
         {
             _productService = priceHistoryService;
         }
+
+        [HttpGet]
+        [Route("getProductBySearch")]
+        public async Task<IActionResult> getProductBySearch(string search)
+        {
+            var product=await _productService.getProductBySearch(search);
+            return Ok(product);
+        }
+
         [HttpGet]
         [Route("getByPage/{page}")]
         public async Task<IActionResult> getByPage(int page)

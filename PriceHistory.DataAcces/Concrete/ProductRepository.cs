@@ -3,6 +3,7 @@ using PriceHistory.DataAcces.Abstract;
 using PriceHistory.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -46,6 +47,16 @@ namespace PriceHistory.DataAcces.Concrete
             using (var priceHistoryDbContext = new PriceHistoryDbContext())
             {
                 return await priceHistoryDbContext.Products.FindAsync(id);
+            }
+        }
+
+        public async Task<List<Product>> getProductBySearch(string search)
+        {
+            using (var priceHistoryDbContext = new PriceHistoryDbContext())
+            {
+
+                var product= await priceHistoryDbContext.Products.Where(x => x.name.Contains(search)).ToListAsync();
+                return product;
             }
         }
 
