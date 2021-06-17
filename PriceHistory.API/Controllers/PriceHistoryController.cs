@@ -17,7 +17,7 @@ namespace PriceHistory.API.Controllers
         private IProductService _productService;
         private IPriceHistoryService _priceHistoryService;
 
-        public PriceHistoryController(IProductService productService,IPriceHistoryService priceHistoryService)
+        public PriceHistoryController(IProductService productService, IPriceHistoryService priceHistoryService)
         {
             _productService = productService;
             _priceHistoryService = priceHistoryService;
@@ -37,17 +37,31 @@ namespace PriceHistory.API.Controllers
                 if (item.isApprove == true)
                 {
                     PriceHistories priceHistories = new PriceHistories();
+                    //*[@id="product-detail-app"]/div/div[2]/div[2]/div[1]/div[1]/div[1]/div[3]/div/div/span
 
                     var document = new HtmlWeb().Load(item.name);
                     var price = document.DocumentNode.SelectSingleNode("//span[contains(@class,'prc-dsc')]");
-                    string yeniPrice = price.InnerText;
-                    int pos = yeniPrice.IndexOf(" ");
-                    yeniPrice = yeniPrice.Substring(0, pos);
+                    if (price != null)
+                    {
+                        string yeniPrice = price.InnerText;
+                        int pos = yeniPrice.IndexOf(" ");
+                        yeniPrice = yeniPrice.Substring(0, pos);
+                        priceHistories.ProductId = item.Id;
+                        priceHistories.date = DateTime.Now;
+                        priceHistories.price = Convert.ToDouble(yeniPrice);
 
-                    priceHistories.ProductId = item.Id;
-                    priceHistories.date = DateTime.Now;
-                    priceHistories.price = Convert.ToDouble(yeniPrice);
+                    }
+                    else
+                    {
+                        price = document.DocumentNode.SelectSingleNode("//span[contains(@class,'prc-slg')]");
+                        string yeniPrice = price.InnerText;
+                        int pos = yeniPrice.IndexOf(" ");
+                        yeniPrice = yeniPrice.Substring(0, pos);
+                        priceHistories.ProductId = item.Id;
+                        priceHistories.date = DateTime.Now;
+                        priceHistories.price = Convert.ToDouble(yeniPrice);
 
+                    }
 
                     await _priceHistoryService.savePriceHistory(priceHistories);
                 }
