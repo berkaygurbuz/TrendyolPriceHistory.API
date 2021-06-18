@@ -9,6 +9,8 @@ namespace PriceHistory.DataAcces.Abstract
     public interface IProductRepository
     {
         Task<List<Product>> getProducts();
+        Task<List<Product>> getRequests();
+
         Task<Product> getProduct(int id);
         Task<List<Product>> getProductBySearch(string search);
 
@@ -17,5 +19,7 @@ namespace PriceHistory.DataAcces.Abstract
         Task deleteProduct(int id);
 
         Task acceptRequest(int id);
+
+
     }
 }

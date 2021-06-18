@@ -37,12 +37,12 @@ namespace PriceHistory.API.Controllers
                 if (item.isApprove == true)
                 {
                     PriceHistories priceHistories = new PriceHistories();
-                    //*[@id="product-detail-app"]/div/div[2]/div[2]/div[1]/div[1]/div[1]/div[3]/div/div/span
 
                     var document = new HtmlWeb().Load(item.name);
                     var price = document.DocumentNode.SelectSingleNode("//span[contains(@class,'prc-dsc')]");
                     if (price != null)
                     {
+                        //toDo item.resim="item.innertext"
                         string yeniPrice = price.InnerText;
                         int pos = yeniPrice.IndexOf(" ");
                         yeniPrice = yeniPrice.Substring(0, pos);

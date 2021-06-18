@@ -47,6 +47,11 @@ namespace PriceHistory.Business.Concrete
             return await _productRepository.getProducts();
         }
 
+        public async Task<List<Product>> getRequests()
+        {
+            return await _productRepository.getRequests();
+        }
+
         public async Task<Product> updateProduct(Product product)
         {
             return await _productRepository.updateProduct(product);

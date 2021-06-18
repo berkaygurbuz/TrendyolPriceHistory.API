@@ -16,9 +16,18 @@ namespace PriceHistory.DataAcces.Concrete
             using (var priceHistoryDbContext = new PriceHistoryDbContext())
             {
                 var product=await getProduct(id);
+                if (product.isApprove == false)
+                {
                 product.isApprove = true;
                 priceHistoryDbContext.Update(product);
                 await priceHistoryDbContext.SaveChangesAsync();
+                }
+                else
+                {
+                    product.isApprove = false;
+                    priceHistoryDbContext.Update(product);
+                    await priceHistoryDbContext.SaveChangesAsync();
+                }
             }
         }
 
@@ -65,6 +74,14 @@ namespace PriceHistory.DataAcces.Concrete
             using (var priceHistoryDbContext = new PriceHistoryDbContext())
             {
                 return await priceHistoryDbContext.Products.ToListAsync();
+            }
+        }
+
+        public async Task<List<Product>> getRequests()
+        {
+            using(var priceHistoryDbContext=new PriceHistoryDbContext())
+            {
+                return await priceHistoryDbContext.Products.Where(x => x.isApprove == false).ToListAsync();
             }
         }
 

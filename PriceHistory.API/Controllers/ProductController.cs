@@ -44,6 +44,14 @@ namespace PriceHistory.API.Controllers
         }
 
         [HttpGet]
+        [Route("getRequests")]
+        public async Task<IActionResult> getRequests()
+        {
+            var request = await _productService.getRequests();
+            return Ok(request); //200+data
+        }
+
+        [HttpGet]
         [Route("getAllProducts")]
         public async Task<IActionResult> getProducts()
         {
@@ -67,6 +75,7 @@ namespace PriceHistory.API.Controllers
             }
         }
         [HttpDelete]
+        [Route("deleteById")]
         public async Task<IActionResult> deleteProduct(int id)
         {
             if (_productService.getProduct(id) != null)

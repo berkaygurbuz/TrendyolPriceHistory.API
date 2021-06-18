@@ -9,6 +9,8 @@ namespace PriceHistory.Business.Abstract
     public interface IProductService
     {
         Task<List<Product>> getProducts();
+        Task<List<Product>> getRequests();
+
         Task<Product> getProduct(int id);
         Task<Product> createProduct(Product product);
         Task<Product> updateProduct(Product product);
