@@ -38,10 +38,19 @@ namespace PriceHistory.API.Controllers
                 {
                     PriceHistories priceHistories = new PriceHistories();
 
-                    var document = new HtmlWeb().Load(item.name);
+                    var document = new HtmlWeb().Load(item.linkUrl);
                     var price = document.DocumentNode.SelectSingleNode("//span[contains(@class,'prc-dsc')]");
                     if (price != null)
                     {
+                        var brand= document.DocumentNode.SelectNodes("//h1[contains(@class,'pr-new-br')]");
+                        string brandParse = "";
+                        foreach (var node in brand)
+                        {
+                            brandParse=node.ChildNodes[0].InnerText;
+                        }
+                        //string brandParse = brand.InnerText;
+                        item.brand = brandParse;
+                        await _productService.updateProduct(item);
                         //toDo item.resim="item.innertext"
                         string yeniPrice = price.InnerText;
                         int pos = yeniPrice.IndexOf(" ");

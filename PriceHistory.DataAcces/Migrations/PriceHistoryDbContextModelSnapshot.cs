@@ -47,10 +47,19 @@ namespace PriceHistory.DataAcces.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("brand")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("category")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("isApprove")
                         .HasColumnType("bit");
 
-                    b.Property<string>("name")
+                    b.Property<string>("linkUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("model")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("price")

@@ -10,8 +10,8 @@ using PriceHistory.DataAcces;
 namespace PriceHistory.DataAcces.Migrations
 {
     [DbContext(typeof(PriceHistoryDbContext))]
-    [Migration("20210613125905_firstMig")]
-    partial class firstMig
+    [Migration("20210619005351_newTables")]
+    partial class newTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -49,10 +49,19 @@ namespace PriceHistory.DataAcces.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("brand")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("category")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("isApprove")
                         .HasColumnType("bit");
 
-                    b.Property<string>("name")
+                    b.Property<string>("linkUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("model")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("price")

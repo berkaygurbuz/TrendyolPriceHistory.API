@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PriceHistory.DataAcces.Migrations
 {
-    public partial class firstMig : Migration
+    public partial class newTables : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -28,7 +28,10 @@ namespace PriceHistory.DataAcces.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    name = table.Column<string>(nullable: true),
+                    linkUrl = table.Column<string>(nullable: true),
+                    brand = table.Column<string>(nullable: true),
+                    model = table.Column<string>(nullable: true),
+                    category = table.Column<string>(nullable: true),
                     price = table.Column<double>(nullable: false),
                     isApprove = table.Column<bool>(nullable: false)
                 },

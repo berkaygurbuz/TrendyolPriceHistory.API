@@ -64,7 +64,7 @@ namespace PriceHistory.DataAcces.Concrete
             using (var priceHistoryDbContext = new PriceHistoryDbContext())
             {
 
-                var product= await priceHistoryDbContext.Products.Where(x => x.name.Contains(search)).ToListAsync();
+                var product= await priceHistoryDbContext.Products.Where(x => x.brand.Contains(search)).ToListAsync();
                 return product;
             }
         }
