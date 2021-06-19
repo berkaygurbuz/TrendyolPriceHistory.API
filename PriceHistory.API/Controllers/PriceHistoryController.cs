@@ -6,6 +6,7 @@ using HtmlAgilityPack;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PriceHistory.Business.Abstract;
+using PriceHistory.DataAcces;
 using PriceHistory.Entities;
 
 namespace PriceHistory.API.Controllers
@@ -24,7 +25,25 @@ namespace PriceHistory.API.Controllers
 
         }
 
+        [HttpGet]
+        [Route("price/getByPage/{page}")]
+        public async Task<IActionResult> getByPage(int page)
+        {
+            using (var priceHistoryDbContext = new PriceHistoryDbContext())
+            {
+                var priceHistories = priceHistoryDbContext.PriceHistorys.ToList().Skip(page * 10).Take(10).ToList();
+                return Ok(priceHistories);
+            }
 
+        }
+
+        [HttpGet]
+        [Route("getPriceHistory")]
+        public async Task<IActionResult> getPriceHistory()
+        {
+            var priceHistory = await _priceHistoryService.getPriceHistory();
+            return Ok(priceHistory);//200+data
+        }
 
         [HttpGet]
         [Route("savePriceHistory")]
@@ -43,7 +62,7 @@ namespace PriceHistory.API.Controllers
                     if (price != null)
                     {
 
-                        if (item.brand == null)
+                        if (item.price == 0||item.price==null)
                         {
 
                         //getting brand and model
@@ -90,15 +109,16 @@ namespace PriceHistory.API.Controllers
 
 
                         priceHistories.ProductId = item.Id;
-                        priceHistories.date = DateTime.Now;
+
+                        priceHistories.date = DateTime.Now.ToShortDateString();
                         priceHistories.price = Convert.ToDouble(yeniPrice);
 
                     }
                     else
                     {
                         price = document.DocumentNode.SelectSingleNode("//span[contains(@class,'prc-slg')]");
-
-                        if (item.brand == null)
+                        //toDo brand yerine price boşsa değiştir!
+                        if (item.price == 0 || item.price==null)
                         {
                             //getting brand and model
                             var brand = document.DocumentNode.SelectNodes("//h1[contains(@class,'pr-new-br')]");
@@ -141,7 +161,10 @@ namespace PriceHistory.API.Controllers
                         item.price = Convert.ToDouble(yeniPrice);
                         await _productService.updateProduct(item);
                         priceHistories.ProductId = item.Id;
-                        priceHistories.date = DateTime.Now;
+
+
+
+                        priceHistories.date = DateTime.Now.ToShortDateString();
                         priceHistories.price = Convert.ToDouble(yeniPrice);
 
                     }

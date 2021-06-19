@@ -9,6 +9,8 @@ namespace PriceHistory.DataAcces.Abstract
     public interface IProductRepository
     {
         Task<List<Product>> getProducts();
+        Task<List<Product>> getFilterByCategoryAndGender(string category,string gender);
+
         Task<List<Product>> getRequests();
 
         Task<Product> getProduct(int id);

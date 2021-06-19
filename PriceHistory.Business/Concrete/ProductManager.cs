@@ -32,6 +32,11 @@ namespace PriceHistory.Business.Concrete
             await _productRepository.deleteProduct(id);
         }
 
+        public async Task<List<Product>> getFilterByCategoryAndGender(string category, string gender)
+        {
+            return await _productRepository.getFilterByCategoryAndGender(category, gender);
+        }
+
         public async Task<Product> getProduct(int id)
         {
             return await _productRepository.getProduct(id);

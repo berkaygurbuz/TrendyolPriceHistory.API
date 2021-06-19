@@ -10,10 +10,10 @@ namespace PriceHistory.Entities
 
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int PriceHistoryId { get; set; }
+        public int Id { get; set; }
         public int ProductId { get; set; }
 
-        public DateTime date { get; set; }
+        public string date { get; set; }
 
         public double price { get; set; }
 

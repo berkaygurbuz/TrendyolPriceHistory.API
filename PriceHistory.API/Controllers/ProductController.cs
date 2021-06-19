@@ -32,6 +32,13 @@ namespace PriceHistory.API.Controllers
         }
 
         [HttpGet]
+        [Route("getFilterByCategoryAndGender")]
+        public async Task<IActionResult> getFilterByCategoryAndGender(string category,string gender)
+        {
+            return Ok(await _productService.getFilterByCategoryAndGender(category, gender));
+        }
+
+        [HttpGet]
         [Route("getByPage/{page}")]
         public async Task<IActionResult> getByPage(int page)
         {

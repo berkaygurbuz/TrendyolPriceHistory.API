@@ -10,5 +10,8 @@ namespace PriceHistory.DataAcces.Abstract
     {
         Task<PriceHistories> savePriceHistory(PriceHistories priceHistories);
 
+        Task<List<PriceHistories>> getPriceHistory();
+
+
     }
 }

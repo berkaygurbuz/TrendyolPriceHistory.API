@@ -17,6 +17,11 @@ namespace PriceHistory.Business.Concrete
             _priceHistoryRepository = priceHistoryRepository;
         }
 
+        public async Task<List<PriceHistories>> getPriceHistory()
+        {
+            return await _priceHistoryRepository.getPriceHistory();
+        }
+
         public async Task<PriceHistories> savePriceHistory(PriceHistories priceHistories)
         {
             return await _priceHistoryRepository.savePriceHistory(priceHistories);

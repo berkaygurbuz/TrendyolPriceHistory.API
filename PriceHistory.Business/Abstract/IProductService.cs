@@ -10,6 +10,7 @@ namespace PriceHistory.Business.Abstract
     {
         Task<List<Product>> getProducts();
         Task<List<Product>> getRequests();
+        Task<List<Product>> getFilterByCategoryAndGender(string category, string gender);
 
         Task<Product> getProduct(int id);
         Task<Product> createProduct(Product product);

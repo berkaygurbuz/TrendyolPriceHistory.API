@@ -50,6 +50,32 @@ namespace PriceHistory.DataAcces.Concrete
             }
         }
 
+        public async Task<List<Product>> getFilterByCategoryAndGender(string category,string gender)
+        {
+           
+            using (var priceHistoryDbContext = new PriceHistoryDbContext())
+            {
+                if (category == ""&&gender=="")
+                {
+                    return await priceHistoryDbContext.Products.ToListAsync();
+
+                }
+                else if (gender != null && category != null)
+                {
+                    return await priceHistoryDbContext.Products.Where(x => x.category == category && x.gender == gender).ToListAsync();
+
+                }
+                else if (gender != null)
+                {
+                    return await priceHistoryDbContext.Products.Where(x => x.gender == gender).ToListAsync();
+                }
+                else
+                {
+                    return await priceHistoryDbContext.Products.Where(x => x.category == category).ToListAsync();
+
+                }
+            }
+        }
 
         public async Task<Product> getProduct(int id)
         {
