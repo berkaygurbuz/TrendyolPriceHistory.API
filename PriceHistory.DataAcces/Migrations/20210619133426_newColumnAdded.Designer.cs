@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PriceHistory.DataAcces;
 
 namespace PriceHistory.DataAcces.Migrations
 {
     [DbContext(typeof(PriceHistoryDbContext))]
-    partial class PriceHistoryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210619133426_newColumnAdded")]
+    partial class newColumnAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

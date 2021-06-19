@@ -42,19 +42,53 @@ namespace PriceHistory.API.Controllers
                     var price = document.DocumentNode.SelectSingleNode("//span[contains(@class,'prc-dsc')]");
                     if (price != null)
                     {
+
+                        if (item.brand == null)
+                        {
+
+                        //getting brand and model
                         var brand= document.DocumentNode.SelectNodes("//h1[contains(@class,'pr-new-br')]");
                         string brandParse = "";
+                        string modelParse = "";
                         foreach (var node in brand)
                         {
                             brandParse=node.ChildNodes[0].InnerText;
+                            modelParse = node.ChildNodes[1].InnerText;
                         }
-                        //string brandParse = brand.InnerText;
+
+                        //getting gender
+                        var gender = document.DocumentNode.SelectNodes("//div[contains(@class,'breadcrumb')]");
+                        string genderParse = "";
+                        string categoryParse = "";
+                        foreach(var node in gender)
+                        {
+                            genderParse = node.ChildNodes[1].FirstChild.InnerText;
+                            categoryParse = node.ChildNodes[3].FirstChild.InnerText;
+                            
+                        }
+                        item.category = categoryParse;
+                        item.gender = genderParse;
+                        //getting image
+                        var image = document.DocumentNode.SelectNodes("//div[contains(@style,'position:relative')]");
+                        var imageParse = "";
+                        foreach (var node in image)
+                        {
+                            var myImage= node.FirstChild.Attributes.Where(x => x.Name == "src").FirstOrDefault();
+                            imageParse = myImage.Value;
+                        }
+                        item.imageUrl = imageParse;
                         item.brand = brandParse;
-                        await _productService.updateProduct(item);
+                        item.model = modelParse;
+                        }
                         //toDo item.resim="item.innertext"
                         string yeniPrice = price.InnerText;
                         int pos = yeniPrice.IndexOf(" ");
                         yeniPrice = yeniPrice.Substring(0, pos);
+                        
+                        item.price =Convert.ToDouble(yeniPrice);
+                        await _productService.updateProduct(item);
+
+
                         priceHistories.ProductId = item.Id;
                         priceHistories.date = DateTime.Now;
                         priceHistories.price = Convert.ToDouble(yeniPrice);
@@ -63,9 +97,49 @@ namespace PriceHistory.API.Controllers
                     else
                     {
                         price = document.DocumentNode.SelectSingleNode("//span[contains(@class,'prc-slg')]");
+
+                        if (item.brand == null)
+                        {
+                            //getting brand and model
+                            var brand = document.DocumentNode.SelectNodes("//h1[contains(@class,'pr-new-br')]");
+                            string brandParse = "";
+                            string modelParse = "";
+                            foreach (var node in brand)
+                            {
+                                brandParse = node.ChildNodes[0].InnerText;
+                                modelParse = node.ChildNodes[1].InnerText;
+                            }
+
+                            //getting gender
+                            var gender = document.DocumentNode.SelectNodes("//div[contains(@class,'breadcrumb')]");
+                            string genderParse = "";
+                            string categoryParse = "";
+                            foreach (var node in gender)
+                            {
+                                genderParse = node.ChildNodes[1].FirstChild.InnerText;
+                                categoryParse = node.ChildNodes[3].FirstChild.InnerText;
+
+                            }
+                            item.category = categoryParse;
+                            item.gender = genderParse;
+                            //getting image
+                            var image = document.DocumentNode.SelectNodes("//div[contains(@style,'position:relative')]");
+                            var imageParse = "";
+                            foreach (var node in image)
+                            {
+                                var myImage = node.FirstChild.Attributes.Where(x => x.Name == "src").FirstOrDefault();
+                                imageParse = myImage.Value;
+                            }
+                            item.imageUrl = imageParse;
+                            item.brand = brandParse;
+                            item.model = modelParse;
+                        }
                         string yeniPrice = price.InnerText;
                         int pos = yeniPrice.IndexOf(" ");
                         yeniPrice = yeniPrice.Substring(0, pos);
+
+                        item.price = Convert.ToDouble(yeniPrice);
+                        await _productService.updateProduct(item);
                         priceHistories.ProductId = item.Id;
                         priceHistories.date = DateTime.Now;
                         priceHistories.price = Convert.ToDouble(yeniPrice);

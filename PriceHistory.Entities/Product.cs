@@ -12,7 +12,10 @@ namespace PriceHistory.Entities
         public string brand { get; set; }
         public string model { get; set; }
         public string category { get; set; }
+        public string gender { get; set; }
         public double price { get; set; }
+
+        public string imageUrl { get; set; }
 
         public bool isApprove { get; set; }
     }

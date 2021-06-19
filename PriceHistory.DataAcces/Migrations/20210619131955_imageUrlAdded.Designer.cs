@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PriceHistory.DataAcces;
 
 namespace PriceHistory.DataAcces.Migrations
 {
     [DbContext(typeof(PriceHistoryDbContext))]
-    partial class PriceHistoryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210619131955_imageUrlAdded")]
+    partial class imageUrlAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,9 +53,6 @@ namespace PriceHistory.DataAcces.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("category")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("gender")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("imageUrl")
