@@ -103,6 +103,15 @@ namespace PriceHistory.DataAcces.Concrete
             }
         }
 
+        public async Task<List<Product>> getProductSearch(string search)
+        {
+            using (var priceHistoryDbContext = new PriceHistoryDbContext())
+            {
+                
+                return await priceHistoryDbContext.Products.Where(x => x.brand.Contains(search)||x.model.Contains(search)).ToListAsync();
+            }
+        }
+
         public async Task<List<Product>> getRequests()
         {
             using(var priceHistoryDbContext=new PriceHistoryDbContext())

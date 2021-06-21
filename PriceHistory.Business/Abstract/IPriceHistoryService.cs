@@ -11,6 +11,7 @@ namespace PriceHistory.Business.Abstract
         Task<PriceHistories> savePriceHistory(PriceHistories priceHistories);
 
         Task<List<PriceHistories>> getPriceHistory();
+        Task<List<PriceHistories>> getPriceHistoryById(int productId);
 
 
     }

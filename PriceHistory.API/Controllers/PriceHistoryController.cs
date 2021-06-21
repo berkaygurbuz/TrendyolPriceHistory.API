@@ -38,6 +38,17 @@ namespace PriceHistory.API.Controllers
         }
 
         [HttpGet]
+        [Route("price/getPriceHistoryById")]
+        public async Task<IActionResult> getPriceHistoryById(int productId)
+        {
+            using (var priceHistoryDbContext = new PriceHistoryDbContext())
+            {
+                var priceHistory = await _priceHistoryService.getPriceHistoryById(productId);
+                return Ok(priceHistory);
+            }
+        }
+
+        [HttpGet]
         [Route("getPriceHistory")]
         public async Task<IActionResult> getPriceHistory()
         {

@@ -3,6 +3,7 @@ using PriceHistory.DataAcces.Abstract;
 using PriceHistory.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,6 +17,16 @@ namespace PriceHistory.DataAcces.Concrete
             {
                 return await priceHistoryDbContext.PriceHistorys.ToListAsync();
             }
+        }
+
+        public async Task<List<PriceHistories>> getPriceHistoryById(int productId)
+        {
+
+            using (var priceHistoryDbContext = new PriceHistoryDbContext())
+            {
+                return await priceHistoryDbContext.PriceHistorys.Where(x=>x.ProductId==productId).ToListAsync();
+            }
+ 
         }
 
         public async Task<PriceHistories> savePriceHistory(PriceHistories priceHistories)

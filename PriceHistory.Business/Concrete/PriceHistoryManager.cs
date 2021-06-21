@@ -22,6 +22,11 @@ namespace PriceHistory.Business.Concrete
             return await _priceHistoryRepository.getPriceHistory();
         }
 
+        public async Task<List<PriceHistories>> getPriceHistoryById(int productId)
+        {
+            return await _priceHistoryRepository.getPriceHistoryById(productId);
+        }
+
         public async Task<PriceHistories> savePriceHistory(PriceHistories priceHistories)
         {
             return await _priceHistoryRepository.savePriceHistory(priceHistories);

@@ -12,6 +12,9 @@ namespace PriceHistory.DataAcces.Abstract
 
         Task<List<PriceHistories>> getPriceHistory();
 
+        Task<List<PriceHistories>> getPriceHistoryById(int productId);
+
+
 
     }
 }

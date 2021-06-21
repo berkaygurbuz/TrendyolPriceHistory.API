@@ -10,6 +10,8 @@ namespace PriceHistory.DataAcces.Abstract
     {
         Task<List<Product>> getProducts();
         Task<List<Product>> getFilterByCategoryAndGender(string category,string gender);
+        Task<List<Product>> getProductSearch(string search);
+
 
         Task<List<Product>> getRequests();
 
